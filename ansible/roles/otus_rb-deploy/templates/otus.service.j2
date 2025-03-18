@@ -1,0 +1,14 @@
+[Unit]
+Description=Сервис для запуска otus.rb
+After=network.target
+
+[Service]
+Type=simple
+User={{ user }}
+Group={{ group }}
+ExecStart=/usr/bin/ruby {{ script_path }}
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

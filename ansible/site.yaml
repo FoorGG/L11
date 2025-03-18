@@ -7,11 +7,11 @@
   roles:
     - common
 
-#- name: Configuring NFS SRV
-#  hosts: NFS_SERVER
-#  become: yes
-#  gather_facts: true
-#  roles:
-#    - systemd_configure
+- name: Configuring NFS SRV
+  hosts: NFS_SERVER
+  become: yes
+  gather_facts: true
+  roles:
+    - otus_rb-deploy
 
 ...
