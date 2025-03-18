@@ -25,7 +25,7 @@ loop do
 #     puts "Created: #{file_name}"
 
     sleep 100
-    system("echo -e \"#{data}\" | mail -s "OTUS_SERVICE" root ")
+    system("echo -e \"#{data}\" | mail -s \"OTUS_SERVICE\" root ")
 
   rescue StandardError => e
     puts "Error: #{e.message}"
