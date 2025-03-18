@@ -1,13 +1,13 @@
 ---
+- name: MAKE GROUP FOR SCRIPT
+  group:
+    name: "{{ group }}"
+
 - name: MAKE USER FOR SCRIPT
   user:
     name: "{{ user }}"
     group: "{{ group }}"
     create_home: no
-
-- name: MAKE GROUP FOR SCRIPT
-  group:
-    name: "{{ group }}"
 
 - name: MAKE SCRIPT DIR
   file:
