@@ -11,6 +11,7 @@ loop do
   begin
     timestamp = Time.now.strftime('%Y-%m-%d_%H-%M-%S')
     file_name = "otus_lesson_#{timestamp}.yml"
+    file_path = '/opt/'
 
     data = {
       PLATFORM => {
@@ -20,7 +21,7 @@ loop do
       }
     }
 
-    File.write(file_name, YAML.dump(data))
+    File.write("#{file_path}#{file_name}", YAML.dump(data))
     puts "Created: #{file_name}"
 
     sleep 10
