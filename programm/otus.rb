@@ -9,9 +9,8 @@ Signal.trap('INT') { puts "\nStopping..."; exit }
 
 loop do
   begin
+
     timestamp = Time.now.strftime('%Y-%m-%d_%H-%M-%S')
-#     file_name = "otus_lesson_#{timestamp}.yml"
-#     file_path = '/opt/'
 
     data = {
       PLATFORM => {
@@ -21,12 +20,13 @@ loop do
       }
     }
 
-#     File.write("#{file_path}#{file_name}", YAML.dump(data))
-#     puts "Created: #{file_name}"
+    message = YAML.dump(data)
 
-    sleep 100
-    system("echo -e \"#{data}\" | mail -s \"OTUS_SERVICE\" root ")
 
+
+    puts(message)
+    system("echo -e \"#{message}\" | mail -s \"OTUS_SERVICE\" root ")
+    sleep 30
   rescue StandardError => e
     puts "Error: #{e.message}"
     sleep 5
