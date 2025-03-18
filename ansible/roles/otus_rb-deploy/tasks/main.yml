@@ -19,7 +19,7 @@
 
 - name: COPY SCRIPT IN SCRIPT`S HOME DIR
   copy:
-    src: "otus.rb"
+    src: "../programm/otus.rb"
     dest: "{{ script_path }}"
     owner: "{{ user }}"
     group: "{{ group }}"
