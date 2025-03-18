@@ -8,7 +8,7 @@
     - common
 
 - name: Configuring NFS SRV
-  hosts: NFS_SERVER
+  hosts: all
   become: yes
   gather_facts: true
   roles:
