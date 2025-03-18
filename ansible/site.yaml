@@ -1,0 +1,17 @@
+---
+
+- name: Update APT Cache
+  hosts: all
+  become: yes
+  gather_facts: true
+  roles:
+    - common
+
+#- name: Configuring NFS SRV
+#  hosts: NFS_SERVER
+#  become: yes
+#  gather_facts: true
+#  roles:
+#    - systemd_configure
+
+...
