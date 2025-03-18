@@ -1,4 +1,4 @@
 ---
-user: "otus-l11"
-group: "otus-l11"
+user: "otus"
+group: "otus"
 script_path: "/opt/otus.rb"
