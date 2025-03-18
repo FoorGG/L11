@@ -1,4 +1,5 @@
 ---
 user: "otus"
 group: "otus"
-script_path: "/opt/otus.rb"
+script_home_path: "/opt/otus/"
+script_path: "/opt/otus/otus.rb"

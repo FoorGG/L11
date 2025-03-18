@@ -7,7 +7,7 @@
   user:
     name: "{{ user }}"
     group: "{{ group }}"
-    create_home: no
+    create_home: "{{ script_home_path }}"
 
 - name: MAKE SCRIPT DIR
   file:
